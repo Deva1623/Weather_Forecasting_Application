@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./custom.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&family=Nunito:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-----Title------>
+    <title>Weather Application</title>
+</head>
+<body>
+
+   <!--------Blue Header------->
+   <header class="bg-teal-600 w-full shadow-lg border">
+       <h1 class="text-white text-center text-xl p-2 " style="word-spacing: 10px; font-family: monospace; font-weight: bolder;"> Weather      Application </h1>
+   </header>
+   
+   <!--main section-->
+   <section class="min-h-screen">
+    <div class="container mx-auto p-2">
+
+        <div class="grid grid-cols-1 md:grid-cols-3">
+            <div class="md:col-span-1 border border-gray-500 text-center mt-4 rounded-lg shadow-md">
+
+                <!-- Input field, dropdown -->
+                <div class="flex flex-col items-center gap-2 mb-16">
+
+                    <input type="text" id="city-name" placeholder="Enter your city" class="border border-black rounded-md h-10 w-full text-lg mt-2 focus:border-amber-300" required>
+                    <span id="error-span"></span>
+                    <select id="recent-city" class="border border-amber-500 w-full bg-gray-700 text-white text-xl font-mono cursor-pointer">
+                    </select>
+                    <!-- Search button -->
+                    <button id="search-btn" class="search-button bg-green-500 w-full p-2 text-white">
+                        <i class="fa-solid fa-magnifying-glass fa-beat fa-lg"></i>
+                    </button>
+
+                </div>
+
+                <!-- Location div -->
+                <div class="location-div flex flex-col gap-4 mb-16 items-center">
+
+                    <h2 class="text-xl font-mono">Search by location</h2>
+                    <!-- Location button -->
+                    <button id="location-btn" class="location-button bg-gray-500 hover:bg-teal-600 w-full p-2 text-white font-bold">
+                        Use current Location
+                        <i class="fa-solid fa-location-dot ml-2"></i>
+                    </button>
+
+                </div>
+
+                <!-- Clock div -->
+                <div id="clock" class="bg-gray-800 text-xl text-white font-bold p-4">
+
+                    <i class="fa-solid fa-clock mr-4"></i>
+                    <!-- To show hours, min, sec -->
+                    <span id="hr" class="bg-gray-600 p-2"></span>
+                    <span id="min" class="bg-gray-600 p-2"></span>
+                    <span id="sec" class="bg-gray-600 p-2"></span>
+
+                </div>
+
+                <!-- animated Gif below clock -->
+                <div class="flex justify-center items-center mt-8">
+
+                    <img src="./images/rainy.gif" alt="weather-gif" class="visible" style="width: 150px; height: 150px;">
+                    <img src="./images/sunny.gif" alt="weather-gif" class="hidden" style="width: 150px; height: 150px;">
+                    <img src="./images/storm.gif" alt="weather-gif" class="hidden" style="width: 150px; height: 150px;">
+
+                </div>
+            </div>
+
+
+
+            <!-----div to show todays and 5 days weather-->
+            <div class="grid grid-cols-1 gap-4 md:col-span-2">
+
+                <!---div for todays weather display-->
+                <div id="weather-div" class="mt-4 h-56 flex justify-between ml-2">
+                    <h1 class="flex mx-auto items-center text-2xl font-extrabold" style="text-shadow: 1px 1px 2px rgb(255, 249, 249), 0 0 25px rgb(230, 230, 240), 0 0 5px rgb(185, 185, 194);">
+                        Search Your City
+                        <i class="fa fa-globe ml-2" aria-hidden="true"></i>
+                    </h1>
+                </div>
+
+                <!-- Div with 5 images initially when nothing fetched -->
+                <!--To show 5 days forecast-->
+                <div id="forecast-div" class="mt-4 h-128 grid grid-cols-2  md:grid-cols-3  lg:grid-cols-5 overflow-auto gap-2 ml-2">
+                    <div class="bg-img rounded-lg shadow-md p-2 flex flex-col gap-5"></div>
+                    <div class="bg-img text-black rounded-lg shadow-md p-2 flex flex-col gap-5"></div>
+                    <div class="bg-img text-black rounded-lg shadow-md p-2 flex flex-col gap-5"></div>
+                    <div class="bg-img text-black rounded-lg shadow-md p-2 flex flex-col gap-5"></div>
+                    <div class="bg-img text-black rounded-lg shadow-md p-2 flex flex-col gap-5"></div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</section>
+
+
+<script src="weather.js"></script>
+</body>
+</html>
+
+
+ 

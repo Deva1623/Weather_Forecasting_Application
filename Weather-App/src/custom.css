@@ -1,0 +1,79 @@
+
+/*-------Adding default  blue backgroung image if nothing searched */
+#weather-div{
+    background-image: url('./images/blue-bg.gif');
+    border-radius: 10px;;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+/*-----styles for 5 cards initially---------*/
+.bg-img{
+    background-image: url('./images/cards.jpeg');
+    background-position: center;
+    background-repeat: no-repeat
+}
+/*------adding styles to circular weather imageon right top*/
+.weather-img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+     0 -4px 8px 0 rgba(0, 0, 0, 0.2), 
+    -4px 8px 8px 0 rgba(0, 0, 0, 0.2), 
+    4px 8px 8px 0 rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+}
+.weather-img:hover{
+    transform: scale(1.4);
+}
+
+/*-------stlyes for search button on hover----*/
+.search-button{
+    transition: background-color 1s ease-in-out, border-radius 1s ease-in-out, width 1s ease-in-out;
+    border-radius: 5px 25px 5px;
+    overflow: hidden;
+}
+.search-button:hover{
+    background-color: rgb(216, 189, 33);
+    border-radius: 20px;
+    width:200px;
+    overflow: hidden;
+}
+
+/*-------stlyes for location button on hover----*/
+
+.location-button{
+    transition:width 1s ease-in-out, background-color 1s ease-in-out, border-radius 1s ease-in-out;
+}
+.location-button:hover{
+      width:200px;
+      border-radius: 15px;
+}
+
+.glass{      
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);         
+}
+
+/*-----Css for flipng 5 days cards----------*/
+.flip{
+    transition: transform 1s ease, background-color 1s ease-in-out;
+    transform-style: preserve-3d;
+    background: rgb(250, 255, 183);
+    /* background-color: rgb(255, 253, 253); */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3),
+    4px 0 6px rgba(0, 0, 0, 0.3),
+    0 -4px 6px rgba(0, 0, 0, 0.3),
+    -4px 0 6px rgba(0, 0, 0, 0.3);
+
+    backdrop-filter: blur(15px);
+    border: 1px solid black; 
+    text-transform:uppercase
+
+}
+.flip:hover{
+    transform: rotateY(360deg);
+    background-color: rgb(243, 255, 79);
+    border: 2px solid rgb(255, 238, 0);
+}
+
+
